@@ -1,5 +1,4 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
-// import Image from "next/image";
 import Link from "next/link";
 
 const NavLink = ({
@@ -41,7 +40,6 @@ export default function Header() {
         <SignedIn>
           <div className="flex gap-2 items-center">
             <NavLink href="/dashboard">Upload a Video</NavLink>
-            {/** Profile */}
             <UserButton />
           </div>
         </SignedIn>

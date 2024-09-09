@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans as FontSans } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { ClerkProvider} from "@clerk/nextjs";
 import Header from "@/components/home/header";
 import { cn } from "@/lib/utils";
 
@@ -33,22 +33,9 @@ export default function RootLayout({
         >
           <Header></Header>
           <main>{children}</main>
-          {/* <Toaster /> */}
         </body>
       </html>
     </ClerkProvider>
-  //   <ClerkProvider>
-  //   <html lang="en">
-  //     <body>
-  //       <SignedOut>
-  //         <SignInButton />
-  //       </SignedOut>
-  //       <SignedIn>
-  //         <UserButton />
-  //       </SignedIn>
-  //       {children}
-  //     </body>
-  //   </html>
-  // </ClerkProvider>
+
   );
 }

@@ -6,10 +6,10 @@ export default function Banner() {
   return (
     <section className="lg:max-w-6xl mx-auto flex flex-col z-0 items-center justify-center py-28 sm:pt-32 ">
       <h1 className="py-6 text-center">
-        Turn your words into{" "}
+        Turn your words into
         <span className="underline underline-offset-8 decoration-dashed decoration-purple-200">
           captivating
-        </span>{" "}
+        </span>
         blog posts
       </h1>
       <h2 className=" text-center px-4 lg:px-0 lg:max-w-4xl">

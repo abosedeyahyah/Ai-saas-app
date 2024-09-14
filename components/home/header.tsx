@@ -1,4 +1,11 @@
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+"use client"
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  useAuth,
+  UserButton,
+} from "@clerk/nextjs";
 import Link from "next/link";
 
 const NavLink = ({
@@ -19,12 +26,12 @@ const NavLink = ({
 };
 
 export default function Header() {
+  const { isSignedIn } = useAuth();
   return (
     <nav className="container flex items-center justify-between px-8 py-4 mx-auto">
       <div className="flex lg:flex-1">
         <NavLink href="/">
           <span className="flex items-center gap-2 shrink-0">
-           
             <span className="font-extrabold text-lg">SpeakEasy</span>
           </span>
         </NavLink>
@@ -44,11 +51,11 @@ export default function Header() {
           </div>
         </SignedIn>
 
-        <SignedOut>
-          <SignInButton>
-            <NavLink href="/sign-in">Sign In</NavLink>
-          </SignInButton>
-        </SignedOut>
+        {isSignedIn ? (
+          <SignedOut />
+        ) : (
+          <SignInButton/>
+        )}
       </div>
     </nav>
   );

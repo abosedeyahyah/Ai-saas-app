@@ -1,9 +1,4 @@
-// import { handleCheckoutSessionCompleted } from "@/lib/payment-helpers";
-// import { handleSubscriptionDeleted } from "@/lib/payment-helpers";
-// import {
-//   // handleCheckoutSessionCompleted,
-//   // handleSubscriptionDeleted,
-// } from "@/lib/payment-helpers";
+
 import { handleCheckoutSessionCompleted, handleSubscriptionDeleted } from "@/lib/payment-helpers";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";

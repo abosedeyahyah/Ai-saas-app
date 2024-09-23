@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider} from "@clerk/nextjs";
 import Header from "@/components/home/header";
 import { cn } from "@/lib/utils";
+import { Toast } from "@radix-ui/react-toast";
 
 
 const fontSans = FontSans({
@@ -35,7 +36,9 @@ export default function RootLayout({
           <main>{children}</main>
         </body>
       </html>
+      {/* <Toast/> */}
     </ClerkProvider>
+    
 
   );
 }

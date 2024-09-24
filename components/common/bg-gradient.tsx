@@ -23,36 +23,3 @@ export default function BgGradient({
     </div>
   );
 }
-
-// CREATE TABLE users(
-//   id uuid DEFAULT gen_random_uuid() NOT NULL;
-//   user_id VARCHAR (255);
-//   full_name VARCHAR(100);
-//   email VARCHAR(255);
-//   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
-//   custormer_id VARCHAR(255);
-//   price_id VARCHAR(255);
-//   status VARCHAR(255);
-//   CONSTRAINT user email key UNIONE(email);
-//   );
-//   CREATE TABLE payments(
-//   id uuid DEFAULT gen_random_uuid() NOT NULL;
-//   amount INTER NOT NULL;
-//   status VARCHAR(20) NOT NULL;
-//   stripe_payment_id VARCHAR(255) NOT NULL;
-//   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
-//   refunded_at TIMESTAMP;
-//   user email VARCHAR(255);
-//   price_id VARCHAR(255);
-//   CONSTRAINT payment_pkey PRIMARY kay(id)
-//   );
-//   CREATE TABLE posts(
-//   id uuid DEFAULT gen_random_uuid() NOT NULL;
-//   user id VARCHAR(255)NOT NULL;
-//   title VARCHAR(255)NOT NULL;
-//   content TEXT NOT NULL;
-//   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
-//   CONSTRAINT post_pkey PRIMARY kay(id)
-//   );
-
-// postgresql://neondb_owner:3EpegUmBYD7Q@ep-sparkling-shape-a5vo4rn7.us-east-2.aws.neon.tech/neondb?sslmode=require

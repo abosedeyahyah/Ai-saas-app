@@ -8,9 +8,4 @@ export default async function getDbConnection() {
   const sql = neon(process.env.DATABASE_URL);
   return sql;
 }
-// const result = await sql`
-// SELECT *
-// FROM information_schema.tables 
-// WHERE table_schema = 'public';
-// `;
 

@@ -1,5 +1,4 @@
 import BgGradient from "@/components/common/bg-gradient";
-// import { Badge } from "@/components/ui/badge";
 import UpgradeYourPlan from "@/components/upload/upgrade-your-plan";
 import UploadForm from "@/components/upload/upload-form";
 import getDbConnection from "@/lib/db";
@@ -23,7 +22,6 @@ export default async function Dashboard() {
 
   const email = clerkUser?.emailAddresses?.[0].emailAddress ?? "";
   const sql = await getDbConnection();
-  // console.log("process.env.DATABASE_URL")
 
   //updatethe user id
   let userId = null;
@@ -33,7 +31,6 @@ export default async function Dashboard() {
   const user = await doesUserExist(sql, email);
 
   if (user) {
-    //update the user_id in users table
     userId = clerkUser?.id;
     if (userId) {
       await updateUser(sql, userId, email);

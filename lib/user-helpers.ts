@@ -5,8 +5,11 @@ export async function hasCancelledSubscription(
   sql: NeonQueryFunction<false, false>,
   email: string
 ) {
+  // const query =
+  //   await sql`SELECT * FROM schema_name.users WHERE email = ${email} AND status = 'cancelled'`;
+    
   const query =
-    await sql`SELECT * FROM "Users" where email = ${email} AND status = 'cancelled'`;
+    await sql`SELECT * FROM users WHERE email = ${email} AND status = 'cancelled'`;
 
   return query && query.length > 0;
 }

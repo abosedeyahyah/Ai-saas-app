@@ -15,14 +15,15 @@ import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
   const clerkUser = await currentUser();
+  console.log("Database connection successful.");
 
   if (!clerkUser) {
     return redirect("/sign-in");
   }
 
   const email = clerkUser?.emailAddresses?.[0].emailAddress ?? "";
-
   const sql = await getDbConnection();
+  // console.log("process.env.DATABASE_URL")
 
   //updatethe user id
   let userId = null;

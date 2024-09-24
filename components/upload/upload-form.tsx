@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useUploadThing } from "@/utils/uploadthing";
-import { generateBlogPostAction, transcribeUploadedFile } from "@/ation/upload-actions";
+import { generateBlogPostAction, transcribeUploadedFile } from "@/actions/upload-actions";
 
 const schema = z.object({
   file: z
